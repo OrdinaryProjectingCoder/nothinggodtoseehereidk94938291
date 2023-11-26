@@ -1,0 +1,15 @@
+name: pathviewer
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: LOL
+    runs-on: windows-latest
+    timeout-minutes: 1
+    
+    steps:
+      - name: hi
+        run: |
+          cmd /k "echo %~f0"
