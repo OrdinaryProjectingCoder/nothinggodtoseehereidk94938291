@@ -1,15 +1,18 @@
-name: pathviewer
+name: SystemInfo
 
 on:
   workflow_dispatch:
 
 jobs:
   build:
-    name: LOL
+    name: Starting...
     runs-on: windows-latest
     timeout-minutes: 1
     
     steps:
-      - name: hi
+      - name: Here is the stuff
         run: |
-          cmd /k "echo %~f0"
+          cmd /k "echo SysInfo:"
+          cmd /k "wmic os get osarchitecture"
+          cmd /k "wmic os get osarchitecture"
+          systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
